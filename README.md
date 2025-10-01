@@ -8,7 +8,7 @@ All possible combinations of Modi script vowels, consonants, and matras were gen
 
 Each combination was converted into a black-and-white image.
 
-Segmentation Pipeline
+Segmentation Pipeline:
 
 The segmentation process consists of several steps:
 
