@@ -58,7 +58,3 @@ The objective is to automatically segment character regions for downstream OCR a
 * Automated character recognition
 
 
-├── notebooks/
-├── src/
-├── outputs/
-└── README.md
