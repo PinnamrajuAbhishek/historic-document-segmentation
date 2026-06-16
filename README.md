@@ -57,10 +57,7 @@ The objective is to automatically segment character regions for downstream OCR a
 * Historical manuscript restoration
 * Automated character recognition
 
-## Project Structure
 
-project/
-├── data/
 ├── notebooks/
 ├── src/
 ├── outputs/
