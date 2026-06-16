@@ -1,36 +1,67 @@
-Dataset:
+# Historic Document Segmentation
 
-Total Images: 157
+## Overview
 
-Generation Process:
+This project focuses on segmenting characters from historical Modi script documents using image processing techniques. The pipeline identifies vowels, consonants, and matras and generates bounding boxes for each segmented component.
 
-All possible combinations of Modi script vowels, consonants, and matras were generated.
+## Problem Statement
 
-Each combination was converted into a black-and-white image.
+Historical document digitization is challenging because of:
 
-Segmentation Pipeline:
+* Noise and degradation
+* Touching characters
+* Complex script structures
+* Variations in handwriting
 
-The segmentation process consists of several steps:
+The objective is to automatically segment character regions for downstream OCR applications.
 
-Grayscale Conversion:
+## Methodology
 
-All 157 images are converted into black-and-white format for processing.
+1. Image preprocessing
 
-Shirorekha Removal:
+   * Grayscale conversion
+   * Noise removal
+   * Thresholding
 
-Using thresholding, continuous white lines (pixel value = 255) are detected and removed.
+2. Shirorekha Removal
 
-This eliminates the horizontal line (shirorekha) commonly present in Modi script.
+   * Detects and removes header lines
 
-Bounding Box Extraction:
+3. Character Segmentation
 
-Sliding window technique is used to detect black pixels.
+   * Connected component analysis
+   * Contour detection
+   * Bounding box generation
 
-Vertical and horizontal movements are used to detect character boundaries.
-Recognition and training:
-From segmentation we get each alphabetical image and performed text recognition which is classfication using modi char dataset which has alphabets along with their labels.
+4. Classification Preparation
 
+   * Segmented characters stored for OCR training
 
-Bounding boxes are drawn around individual characters.
+## Results
 
-This approach allows effective segmentation of Modi script characters for further recognition or processing.
+* Successfully segmented Modi script characters
+* Generated bounding boxes around character regions
+* Improved character isolation for OCR pipelines
+
+## Tech Stack
+
+* Python
+* OpenCV
+* NumPy
+* Matplotlib
+
+## Future Improvements
+
+* Deep Learning-based segmentation
+* Integration with OCR models
+* Historical manuscript restoration
+* Automated character recognition
+
+## Project Structure
+
+project/
+├── data/
+├── notebooks/
+├── src/
+├── outputs/
+└── README.md
